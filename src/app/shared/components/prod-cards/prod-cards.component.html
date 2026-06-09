@@ -1,0 +1,14 @@
+<mat-card class="mt-4">
+    <mat-card-title>{{getProduct.prodName}}</mat-card-title>
+    <mat-card-content>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, debitis magnam. Dolores mollitia
+            inventore minus
+            <strong>{{getProduct.prodStatus || 'Delivered'}}</strong>
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button (click)="onUpdateStatus(prodStatus.Delivered)" mat-raised-button color="accent">Delivered</button>
+        <button (click)="onUpdateStatus(prodStatus.Inprogress)" mat-raised-button color="warn">Inprogress</button>
+        <button (click)="onUpdateStatus(prodStatus.Dispatched)" mat-raised-button color="primary">Dispatched</button>
+    </mat-card-actions>
+</mat-card>
